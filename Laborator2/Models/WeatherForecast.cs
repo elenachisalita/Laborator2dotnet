@@ -1,6 +1,6 @@
 using System;
 
-namespace Laborator2
+namespace Laborator2.Models
 {
     public class WeatherForecast
     {
