@@ -9,9 +9,10 @@ namespace Laborator2.Models
     {
 
         public long Id { get; set; }
-
+        public long MovieId { get; set; }
         public string Author { get; set; }
         public string Text { get; set; }
+
         public Movie Movie { get; set; }
    
     }

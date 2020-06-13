@@ -1,0 +1,56 @@
+<h1 id="tableLabel">Movies</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!movies"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="movies">
+    <thead>
+        <tr>
+
+            <th>Title</th>
+            <th>Description</th>
+            <th>Genre</th>
+            <th>Duration</th>
+            <th>Year Of Release</th>
+            <th>Director</th>
+            <th>Date Added</th>
+            <th>Rating</th>
+            <th>Watched</th>
+            <th>No. of comments</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.description }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.duration }}</td>
+            <td>{{ movie.yearOfRelease }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.dateAdded }}</td>
+            <td>{{ movie.rating }}</td>
+            <td>{{ movie.watched }}</td>
+            <td>{{ movie.numberOfComments }}</td>
+            <td>
+                <a class="btn btn-primary" [routerLink]="['/fetch-data', movie.id]" routerLinkActive="active">Details</a> |
+                <a class="btn btn-info">Edit</a> |
+                <a class="btn btn-danger" (click)="delete(movie.id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p>Add a movie</p>
+
+
+<input [(ngModel)]="name" />
+
+<p>{{name}}</p>
+
+<button (click)="submit()">Submit!</button>
+
+
+<input type="date" />
+
