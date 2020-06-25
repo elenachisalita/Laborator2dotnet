@@ -30,8 +30,9 @@ namespace Laborator2.Models
         public int Rating { get; set; }
         public bool Watched { get; set; }
 
-        public List<Comment> Comments { get; set; }
+        public User AddedBy { get; set; }
 
+        public List<Comment> Comments { get; set; }
 
     }
 }

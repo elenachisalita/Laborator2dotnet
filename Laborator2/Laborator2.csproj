@@ -17,8 +17,16 @@
 	  <TypeScriptCompile Remove="ClientApp\node_modules\**" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Remove="Migrations\20200625161955_AddUserAndLinksWithOtherEntities.cs" />
+	  <Compile Remove="Migrations\20200625161955_AddUserAndLinksWithOtherEntities.Designer.cs" />
+	  <Compile Remove="Migrations\20200625163321_AddUserAndLinksWithOtherEntities.cs" />
+	  <Compile Remove="Migrations\20200625163321_AddUserAndLinksWithOtherEntities.Designer.cs" />
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
@@ -34,6 +42,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.6.0" />
   </ItemGroup>
 
 

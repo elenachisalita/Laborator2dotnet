@@ -14,5 +14,7 @@ namespace Laborator2.Models
         }
         public DbSet<Movie> Movies{ get; set; }
         public DbSet<Comment> Comments { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
